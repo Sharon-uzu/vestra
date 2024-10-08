@@ -1628,14 +1628,18 @@ footer .foot .right{
 .dashboard{
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .dashboard main{
-  width: 100%;
+  width: calc(100% - 80px)
+  /* margin-left: auto; */
 }
 
+
+
 .dashboard main .dash{
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 .dashboard main .dash .first{
@@ -1919,6 +1923,9 @@ footer .foot .right{
  .dashboard main .dash .fourth .line-g .perf .time h4 .t1{
   color: #12B76A;
  }
+ .dashboard main .dash .fourth .line-g .perf .time select{
+  margin-top: 2px;
+ }
 
  .dashboard main .dash .fourth .table{
   width: 30%;
@@ -1960,6 +1967,7 @@ footer .foot .right{
 .side{
   width: 70px;
   position: relative;
+  height: 100vh;
 }
 .sidebar{
   position: fixed;
@@ -2400,6 +2408,56 @@ footer .foot .right{
   cursor: pointer;
 }
 
+
+@media screen and (max-width: 1100px){
+  .recharts-wrapper{
+    width: unset !important;
+  }
+  .side{
+    width: 40px;
+  }
+  .sidebar{
+    width: 40px;
+  }
+  .dashboard main{
+    width: calc(100% - 45px);
+    padding-bottom: 30px;
+  }
+  .dashboard main .dash {
+    width: 95%;
+    margin: auto;
+  }
+  .dashboard main .dash .first img{
+    width: 38px;
+  }
+  .dashboard main .dash .first b{
+    font-size:20px;
+  }
+  .dashboard main .dash .third .div{
+    width: 32%;
+  }
+  .dashboard main .dash .third .div .wal h3{
+    font-size: 15px;
+  }
+  .dashboard main .dash .third .div .earn h3{
+    font-size: 15px;
+  }
+  .dashboard main .dash .third .rules h3{
+    font-size: 16px;
+  }
+  .dashboard main .dash .fourth .table{
+    width: 32%;
+  }
+  .dashboard main .dash .table table tr td{
+    font-size: 14px;
+  }
+  /* dashboard */
+  .paysetting .pref{
+    width: 50%;
+  }
+}
+
+
 @media screen and (max-width: 950px){
   header{
     position: relative;
@@ -2485,6 +2543,39 @@ header nav ul .log-a{
     width: 60%;
   }
 
+  /* dashboard */
+  .dashboard main .dash .third{
+    flex-wrap: wrap;
+  }
+  .dashboard main .dash .third .div{
+    width: 47%;
+    margin-bottom: 20px;
+  }
+  .dashboard main .dash .third .rules{
+    width: 100%;
+  }
+
+  .dashboard main .dash .fourth{
+    flex-wrap: wrap;
+  }
+  .dashboard main .dash .fourth .line-g{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .dashboard main .dash .fourth .table{
+    width: 100%;
+  }
+  .dashboard main .dash .table table{
+    width: 90%;
+    margin: auto;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+  .password-setting{
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 850px){
@@ -2528,6 +2619,22 @@ header nav ul .log-a{
   .registration .reg-r .reg-c{
     width: 85%;
   }
+
+  /* dashboard */
+  .dashboard main .dash .first{
+    flex-wrap: wrap;
+    padding: 25px 0;
+  }
+
+  .dashboard main .dash .first div{
+    margin-bottom: 12px;
+  }
+
+  .dashboard main .dash .second .line{
+    width: 18%;
+  }
+
+  
 
 }
 
@@ -2611,6 +2718,9 @@ header nav ul .log-a{
   }
 
   .resetsuccess .success{
+    width: 70%;
+  }
+  .paysetting .pref{
     width: 70%;
   }
 
@@ -2706,6 +2816,27 @@ header nav ul .log-a{
     font-size: 25px;
   }
 
+  /* dashboard */
+  .dashboard main .dash .third .div{
+    width: 100%;
+  }
+
+  .recharts-surface{
+    width: unset !important;
+  }
+
+  .dashboard main .dash .second .line{
+    width: 7%;
+  }
+
+  .settings{
+    width: 80%;
+  }
+
+  .profile-setting{
+    width: 90%;
+  }
+
 
 }
 
@@ -2739,6 +2870,33 @@ header nav ul .log-a{
     width: 100%;
   }
 
+  /* dashboard */
+  .n-heading{
+    height: auto;
+    padding: 20px 0;
+  }
+  .n-heading .n-h-c{
+    width: 90%;
+    flex-wrap: wrap;
+
+  }
+  .n-heading .n-h-c h4{
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .n-heading .n-h-c .search-f{
+    width: 80%;
+  }
+  .notification .messages{
+    width: 90%;
+  }
+  .notification .messages .message .m-c{
+    flex-direction: column;
+  }
+
+  .password-setting{
+    width: 90%;
+  }
 
 }
 
@@ -2757,6 +2915,15 @@ header nav ul .log-a{
   }
 }
 
+@media screen and (max-width: 550px){
+  .dashboard main .dash .fourth .line-g .perf{
+    flex-direction: column;
+  }
+  .dashboard main .dash .fourth .line-g .perf .time{
+    margin-top: 18px;
+  }
+  
+}
 
 @media screen and (max-width: 500px){
   .invest .numbering{
@@ -2795,8 +2962,85 @@ header nav ul .log-a{
     width: 80%;
   }
 
+  /* dashboard */
+  .dashboard main .dash .second{
+    flex-wrap: wrap;
+  }
+  .dashboard main .dash .second button{
+    margin-bottom: 12px;
+  }
+  .dashboard main .dash .second .line{
+    display: none;
+  }
+
+  .dashboard main .dash .fourth .table{
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    max-width: 100%;
+  }
+  .dashboard main .dash .fourth .table table{
+    border-collapse: collapse;
+    width: 500px;
+  }
+    .dashboard main .dash .fourth .table table tr{
+      width: 95%;
+      margin: auto;
+    }
+
+    .settings{
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .settings h3{
+      width: 44%;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .profile-setting{
+      width: 100%;
+      margin-top: 60px;
+    }
+    .profile-setting .prof1{
+      width: 100%;
+    }
+    .profile-setting .prof2{
+      width: 100%;
+    }
+
+    .notify-setting{
+      width: 80%;
+    }
+
+    .paysetting .pref{
+      width: 90%;
+    }
+
 }
 
+@media screen and (max-width: 450px){
+  .dashboard main .dash .first{
+    height: auto;
+  }
+  .dashboard main .dash .first .f-btns{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    /* flex-direction: row-reverse; */
+  }
+  .dashboard main .dash .first b{
+    font-size: 18px;
+  }
+  .pie{
+    padding-bottom: 30px;
+  }
+
+  /* dashboard */
+  .password-setting .p-c .s-form .p-btns{
+    width: 85%;
+  }
+ 
+}
 
 @media screen and (max-width: 400px){
   .hero-s img{
@@ -2806,13 +3050,60 @@ header nav ul .log-a{
     width: 90%;
   }
   .registration .reg-r .reg-c h3{
-    font-size: 26px;
+    font-size: 20px;
+  }
+  .registration .reg-r .reg-c .r-form .form-c h6{
+    font-size: 13px;
   }
   .resetsuccess .success .s-c h3{
     font-size: 22px;
   }
+
+
+  /* dashboard */
+  .dashboard main .dash .fourth .line-g .perf .time{
+    flex-wrap: wrap;
+  }
+
+  .recharts-legend-wrapper{
+    position: unset !important;
+    
+  }
+  .recharts-legend-wrapper ul{
+    display: flex !important;
+  }
+
+  .dashboard main .dash .third .div{
+    height: auto;
+    padding: 30px 0;
+  }
+
+  
+  .dashboard main .dash .third .rules ul{
+    width: 85%;
+    margin: auto;
+  }
+
+  .password-setting .p-c .s-form .p-btns{
+    width: 100%;
+  }
+  
 }
 
+@media screen and (max-width: 350px){
+  .dashboard main .dash .first div{
+    margin-left: 5px;
+  }
+  .password-setting .p-c .s-form .p-btns{
+    flex-direction: column-reverse;
+  }
+  .notify-setting{
+    width: 100%;
+  }
+  .paysetting .pref{
+    width: 100%;
+  }
+}
 
 
 @media screen and (max-width: 300px){
@@ -2836,5 +3127,16 @@ header nav ul .log-a{
   }
   .resetsuccess .success{
     width: 90%;
+  }
+
+  .dashboard main .dash .first b{
+    font-size: 16px;
+  }
+
+  .resetsuccess .success .s-c p{
+    font-size: 14px;
+  }
+  .registration .reg-r .reg-c p{
+    font-size: 14px;
   }
 }

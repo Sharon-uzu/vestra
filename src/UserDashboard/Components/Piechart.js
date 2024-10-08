@@ -1,14 +1,15 @@
-import React from 'react'
-import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
-
+import React from "react";
+import {
+    PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer,
+} from "recharts";
 
 const data = [
-    { name: 'Capital', value: 1000 },
-    { name: 'Cashback', value: 200 },
-    
-  ];
-  
-  const COLORS = ['#0F7A23','#3BD858'];
+        { name: 'Capital', value: 1000 },
+        { name: 'Cashback', value: 200 },
+        
+      ];
+
+    const COLORS = ['#0F7A23','#3BD858'];
 
 
 const Piechart = () => {
@@ -19,9 +20,10 @@ const Piechart = () => {
     const margin = { top: 5, left: 5 }; 
 
 
+
   return (
-    <div>
-        <PieChart width={350} height={200}>
+    <ResponsiveContainer width="100%" height={200}>
+              <PieChart className='pies' width={100} height={200}>
                 <Pie
                     data={data}
                     cx={100}
@@ -54,7 +56,7 @@ const Piechart = () => {
                     iconType="circle"
                 />
             </PieChart>
-    </div>
+    </ResponsiveContainer>
   )
 }
 

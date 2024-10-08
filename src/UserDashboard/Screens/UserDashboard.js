@@ -100,7 +100,7 @@ const UserDashboard = () => {
                             <img src={logo} alt="" />
                             <b>Monitor the health of your <span>finances</span></b>
                         </div>
-                        <div>
+                        <div className='f-btns' >
                             <Link to='/withdraw'><button className='btn1'>Withdraw Funds</button></Link>
                             <Link to='/deposit'><button className='btn2'>Invest Funds</button></Link>
                             <Link to=''><button className='btn'>Lock Funds</button></Link>
@@ -131,7 +131,7 @@ const UserDashboard = () => {
                                 <h5>$200,000.00</h5>
                             </div>
 
-                            <div>
+                            <div  className='pie'>
                                 <Piechart/>
                             </div>
 
